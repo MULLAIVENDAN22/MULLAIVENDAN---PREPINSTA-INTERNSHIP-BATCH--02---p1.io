@@ -1,0 +1,18 @@
+ STARTING COMMANDS
+    * git init
+    * git status
+    * ls   --> list
+    * cd -(file name)-
+    * cd ..   --> previous folder
+    * git add --a     --> performed from the basic folder. (here -    PREPINSTA INTERNSHIP BATCH -02)
+    * git commit -m "initial commit"      --> within the "" ,have to give a command about what we are doning (just for reference)
+    * git branch -M main
+    * git remote add origin https://github.com/MULLAIVENDAN22/MULLAIVENDAN---PREPINSTA-INTERNSHIP-BATCH--02.git
+    * git push -u origin main
+
+    
+AFTER ADDING OR MAKING CHANGES
+    * git status
+    * git add --a   
+    * git commit -m "initial commit" 
+    * git push

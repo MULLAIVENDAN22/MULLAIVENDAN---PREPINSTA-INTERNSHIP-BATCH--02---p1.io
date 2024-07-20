@@ -1,0 +1,108 @@
+<!-- Scenario 2: Creating a Product Catalog
+
+You are tasked with creating a simple product catalog page for an online store. The page should have a header section with
+ the store's name, a list of product categories, and a section for displaying individual product information. 
+ Each product should include an image, a title, a description, and a link to the product details page.
+Create the HTML structure for this product catalog page using div, p, section, list, img, anchor, and span tags. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <title>FLASH SLEEP</title>
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(255, 132, 0);
+            color: white;
+            padding: 10px;
+            font-size: 35px;
+            margin: 0;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: left;
+        }
+        a{
+            text-decoration: none;
+            padding: 8px 18px;
+            font-size: 24px;
+            color: black;
+            font-weight: 400;
+        }
+        .product-catalog{
+            display: inline-flex;
+        }
+        .product{
+            margin: 25px;
+        }
+        img{
+            width: 300px;
+            height: auto;
+        }
+        li a:hover{
+            background-color: rgb(255, 132, 0);
+            color: white;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Flash Sleep</h1>
+        <section class="categories">
+          <h2>Product Categories</h2>
+          <ul>
+            <li><a href="#">Mattresses</a></li>
+            <li><a href="#">Pillows</a></li>
+            <li><a href="#">Flash Bed</a></li>
+            <!-- Add more categories here -->
+          </ul>
+        </section>
+      </div>
+      
+      <!-- Product Catalog Section -->
+      <h2>Product Catalog</h2>
+      <section class="product-catalog">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="https://www.emma-sleep.in/cdn/shop/files/Untitleddesign_33.png?v=1686638826" alt="Product 1 Image">
+          <h3><span>Flash Hybrid Mattress</span></h3>
+          <p>Balance of orthopedic support & hug-like sleeping experience.</p>
+          <a href="https://www.emma-sleep.in/products/emma-hybrid-mattress">View Details</a>
+        </div>
+      
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="https://www.emma-sleep.in/cdn/shop/files/2_d9afb760-027b-4846-b2d8-1553c0471fc7.png?v=1706690569" alt="Product 2 Image">
+          <h3><span>Flash Black Mattress</span></h3>
+          <p>40% More Efficient Than Latex</p>
+          <a href="https://www.emma-sleep.in/products/emma-black-mattress">View Details</a>
+        </div>
+      
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://www.emma-sleep.in/cdn/shop/files/Untitleddesign_31.png?v=1686318186" alt="Product 2 Image">
+            <h3><span>Flash Original Mattress</span></h3>
+            <p>The most awarded orthopedic mattress online.</p>
+            <a href="https://www.emma-sleep.in/products/emma-original-mattress">View Details</a>
+          </div>
+
+          <!-- Product 4 -->
+        <div class="product">
+            <img src="https://www.emma-sleep.in/cdn/shop/files/Untitled_design_39_31d9a9eb-a0c0-4392-999a-2262074ae725.png?v=1695390029" alt="Product 2 Image">
+            <h3><span>Flash Wave II Mattress </span></h3>
+            <p>Award winning Swiss comfort for those who value modern luxury</p>
+            <a href="https://www.emma-sleep.in/products/emma-wave-2-mattress">View Details</a>
+          </div>
+      </section>
+</body>
+</html>
