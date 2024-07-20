@@ -1,0 +1,76 @@
+<!-- You are tasked with designing a simple representation of the Instagram logo using HTML and CSS. 
+ Your goal is to accurately capture the essence of the logo, including the colorful gradient background, 
+ camera outline, and lens elements -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Instagram Logo</title>
+     <style>
+         body {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             margin: 0;
+             background: #fafafa;
+         }
+ 
+         .logo-container {
+             width: 200px;
+             height: 200px;
+             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+             border-radius: 20%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: relative;
+         }
+ 
+         .camera-outline {
+             width: 120px;
+             height: 120px;
+             border: 6px solid white;
+             border-radius: 20%;
+             position: relative;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         }
+ 
+         .lens {
+             width: 60px;
+             height: 60px;
+             background: white;
+             border-radius: 50%;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         }
+ 
+         .flash {
+             width: 20px;
+             height: 20px;
+             background: white;
+             border-radius: 50%;
+             position: absolute;
+             top: 10%;
+             right: 10%;
+             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+         }
+     </style>
+ </head>
+ <body>
+     <div class="logo-container">
+         <div class="camera-outline">
+             <div class="lens"></div>
+             <div class="flash"></div>
+         </div>
+     </div>
+ </body>
+ </html>
+ 

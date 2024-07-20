@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bar Loader</title>
+
+    <style>
+        body {
+            background: #fff8f8;
+        }
+
+        .loader {
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 4px solid transparent;
+            position: relative;
+            padding: 10px;
+            margin-top: 18%;
+        }
+
+        .loader:before {
+            content: '';
+            border: 2px solid #505050;
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+        }
+
+        .loader .loaderBar {
+            position: absolute;
+            margin-top: -3px;
+            margin-bottom: -3px;
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            left: 0;
+            background: rgb(0, 166, 255);
+            width: 0;
+            animation: borealisBar 1.9s linear infinite;
+        }
+
+        @keyframes borealisBar {
+            0% {
+                left: 0%;
+                right: 100%;
+                width: 0%;
+            }
+
+            10% {
+                left: 0%;
+                right: 75%;
+                width: 25%;
+            }
+
+            90% {
+                right: 0%;
+                left: 75%;
+                width: 25%;
+            }
+
+            100% {
+                left: 100%;
+                right: 0%;
+                width: 0%;
+            }
+        }
+
+        footer {
+            display: block;
+        }
+
+        footer a {
+            font-size: 29px;
+            color: #ffffff;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            background-color: rgb(0, 166, 255);
+            padding: 10px 45px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loaderBar"></div>
+    </div>
+    <footer>
+        <a href="index.html"> Back</a>
+    </footer>
+</body>
+
+</html>

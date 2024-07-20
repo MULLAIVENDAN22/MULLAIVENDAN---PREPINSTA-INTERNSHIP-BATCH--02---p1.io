@@ -1,0 +1,36 @@
+<!-- Instagram - Image Gallery:
+        Scenario:   Build an image gallery similar to Instagram where users can upload and view images.
+        Case Study: You are tasked with creating an image gallery for a photo-sharing app.
+                    Users should have a seamless experience uploading and browsing images.
+                    The design should prioritize aesthetics and user engagement.
+        Requirements:
+                    Design a grid layout for displaying images.
+                    Use HTML to create the gallery structure.
+                    Apply CSS to make the gallery responsive.
+        Include a button for uploading images (optional). -->
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <title>Instagram Image Gallery</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <header>
+                <h1>Image Gallery</h1>
+                <button id="upload-btn">Upload Image</button>
+                <input type="file" id="image-upload" accept="image/*" hidden>
+            </header>
+            <main>
+                <div class="gallery-grid"></div>
+            </main>
+        
+            <script src="script.js"></script>
+        </body>
+        </html>

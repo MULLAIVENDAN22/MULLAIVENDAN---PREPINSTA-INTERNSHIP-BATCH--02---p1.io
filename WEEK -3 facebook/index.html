@@ -1,0 +1,128 @@
+<!-- Scenario: Create a profile header similar to Facebook, including the user's profile picture, cover photo, 
+               and user information.
+Case Study:     Imagine you are designing a profile page for a social networking site. Users should be able to showcase 
+                their personality through a profile picture and cover photo. The user information should be easily 
+                accessible and visually appealing.
+Requirements:
+                Use HTML to structure the header.
+                Apply CSS to style the header elements.
+Include placeholders for the profile picture and cover photo -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <title>Facebook</title>
+    <style>
+        div{
+            width: 100%;
+            height: 300px;
+            background-color: #969696;
+            z-index: -1;
+        }
+        img{
+            width: 230px; 
+            height: 230px;
+            border-radius: 50%; 
+            overflow: hidden;
+            z-index: 1;
+            margin-left: 50px;
+            margin-top: 175px;
+            border: 6px solid white;
+        }
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1{
+            margin-left: 295px;
+            margin-top: -100px;
+        }
+        a{
+            
+            text-decoration: none;
+            
+        }
+        #fis{
+            color: white;
+            background-color: rgb(60, 60, 175);
+            padding: 8px 18px;
+            font-weight: 700;
+        }
+        #sec{
+            color: black;
+            background: #d6d6d6;
+            padding: 8px 20px;
+            font-weight: 700;
+        }
+        p{
+            margin-left: 305px;
+        }
+        hr{
+            color: #d6d6d6;
+            height: 5px;
+            background: #969696;
+        }
+        #im{
+            height: 80px;
+            width: auto;
+            float: left;
+            margin-top: 13px;
+            margin-left: -5px;
+            padding-left: 10px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            list-style-type: none;
+        }
+        li a{
+            padding: 15px 170px;
+            margin-left: 50px;
+            color: #5b5b5b;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        li a:hover{
+            border-bottom:2px solid blue;
+        }
+        .hor{
+            height: 2px;
+            background: #969696;
+        }
+        p img{
+            height: 35px;
+            width: auto;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://via.placeholder.com/200" alt="">
+        <h1>Mullaivendan</h1>
+        <p> <b>38</b> Friends</p>
+        <a id="fis" style="margin-left: 70%;" href="#">+ Add to story</a>
+        <a id="sec" style="margin-left: 25px;" href="#">Edit profile</a>
+        <br>
+        <img id="im" src="https://th.bing.com/th/id/OIP.OKowSFSWQOsgjlfDXNyOcAHaG4?w=840&h=780&rs=1&pid=ImgDetMain" alt="not found">
+        <h2>You've locked your profile</h2>
+        <a href="#">Learn more</a>
+        <br><br><br>
+        <hr>
+        <ul>
+            <li><a href="#">Posts</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Reels</a></li>
+        </ul>
+        <br> <br>
+        <p style="margin-top: -100px;margin-left: -35px;"><img src="https://image.pngaaa.com/707/5953707-middle.png" alt=""> From <b> Vellore </b></p>
+        <p style="margin-top: -190px;margin-left: -40px;"><img src="https://icons.veryicon.com/png/o/miscellaneous/loan-king-icon-library/dkw_-more.png" alt=""> See more about yourself</p>
+        <hr class="hor">
+        <br>
+    </div>
+</body>
+</html>
