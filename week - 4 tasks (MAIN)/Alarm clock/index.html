@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <title>Alarm clock</title>
+    <Style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('MyCustomFont.ttf') format('truetype');
+        }
+
+        body {
+            font-family: MyCustomFont;
+            background-color: #1a1a1a;
+            color: rgb(137, 137, 137);
+        }
+
+        h1 {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 70px;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+
+        #container {
+            margin-left: 35%;
+            margin-top: -20px;
+            font-size: 70px;
+            height: 100px;
+            width: fit-content;
+
+        }
+
+        p {
+            padding: -20px 50px;
+            border: 5px solid gray;
+            border-radius: 10px;
+            padding: 15px 30px;
+            background-color: black;
+            box-shadow: rgb(0,0,0,0.6);
+        }
+
+        #button{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 25px;
+            font-size: 35px;
+        }
+
+        #button button{
+            padding: 8px 18px;
+            border: 2.5px solid gray;
+            border-radius: 8px;
+            color: rgb(137, 137, 137);
+            background-color: #1a1a1a;
+            cursor: pointer;
+            
+        }
+
+    </Style>
+</head>
+
+<body>
+    <h1>Alarm Clock</h1>
+    <div id="container"></div>
+    <div id="button">
+        <button onclick=alarm()>Set alarm</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

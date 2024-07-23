@@ -1,0 +1,175 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+#search {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+
+#search-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #3e8e41;
+}
+
+#add-button {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;;
+    cursor: pointer;
+}
+
+#add-button:hover {
+    background-color: #ff3860;
+}
+
+#add-book-form{
+    display: none;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 500px;
+    height: 240px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 31%;
+}
+
+#add-book-form form button{
+    margin-left: 88px;
+    
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+#search-results > * {
+    margin: 10px;
+  }
+
+.center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-book {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-book form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-book button {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-book label {
+    margin-bottom: 10px;
+}
+
+.add-book input[type="text"], .add-book input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-book button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; 
+  }
+
+
+.book {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book h2 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.book p {
+    margin-bottom: 10px;
+}
+
+.remove-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

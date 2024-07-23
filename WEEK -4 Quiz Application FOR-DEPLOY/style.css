@@ -1,0 +1,46 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .question-container {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .question {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .options {
+      margin-left: 20px;
+    }
+    .option {
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    .score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    .correct {
+    color: green;
+    }
+    .incorrect {
+    color: red;
+    }
+    .locked {
+        pointer-events: none;
+        opacity: 0.5;
+      }

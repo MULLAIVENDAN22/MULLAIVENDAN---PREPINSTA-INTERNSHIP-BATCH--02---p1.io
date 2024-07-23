@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="center">Library Management System</h1>
+    <div class="search-bar center">
+        <input type="text" id="search" placeholder="Search for a book">
+        <button id="search-button">Search</button>
+    </div>
+    <div class="add-book center">
+        <button id="add-button">Add Book</button>
+    </div>
+    <div id="add-book-form">
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title"><br><br>
+            <label for="author">Author:</label>
+            <input type="text" id="author"><br><br>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages"><br><br>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre"><br><br>
+            <button type="submit">Add Book</button>
+            <div id="error-message"></div>
+        </form>
+    </div>
+    <div id="book-list"></div>
+    <button id="back-button" style="display: none;">Back</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
