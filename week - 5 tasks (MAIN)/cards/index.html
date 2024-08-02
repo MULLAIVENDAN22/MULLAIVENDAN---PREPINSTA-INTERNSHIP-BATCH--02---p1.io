@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #d9d9d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 100%;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.2);
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+        .card:hover{
+            transform: scale(1.1) rotateY(180deg);
+        }
+        span{
+            font-size: 28px;
+        }
+        .hided{
+            display: none;
+        }
+        .matched:hover{
+            transform: none;
+            
+        }
+        .matched{
+            background-color: rgb(112, 235, 118);
+            transform: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="score"> score : 0</div>
+    <div id="time"> 60sec</div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- 
+
+
+let containers= document.getElementById("container")
+let scoredisplay= document.getElementById("score")
+let timedisplay= document.getElementById("time")
+
+let score=0
+let time=60
+
+const fruits=['🍒','🍇','🍈','🍉','🍏','🍎','🍓','🍐']
+let fruit=[...fruits,...fruits]
+let fruity=fruit
+const [first,second]=fruity
+
+fruit.forEach((fruit,index) => {
+    let card= document.createElement("div")
+    card.classList.add("card")
+    card.dataset.index=index
+    containers.appendChild(card)
+    let element= document.createElement("span")
+    element.innerText=fruit
+    card.appendChild(element)
+    showcard(card,element) 
+})
+
+let data
+
+function showcard(card,element){
+    hidecard(element)
+    card.addEventListener("click",function(){
+        element.classList.remove("hided")
+        element.classList.add("opened")
+        data= this.dataset.index
+        let clickedFruit = element.innerText;
+        fruity.push(clickedFruit)
+        if(fruity===2){
+            return;
+        }
+        if(first==second){
+            element.classList.add("matched")
+            card.classList.add("matched")
+            element.classList.remove("hided")
+            scoredisplay()
+        }
+    })
+}
+
+function hidecard(element){
+    element.classList.add("hided")
+}
+
+function scoredisplay(){
+    score+=10
+    
+}
+ -->

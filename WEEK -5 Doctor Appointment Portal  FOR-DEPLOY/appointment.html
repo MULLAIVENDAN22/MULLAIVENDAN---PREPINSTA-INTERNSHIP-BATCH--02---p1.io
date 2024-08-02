@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style-3.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+            font-family: "JetBrains Mono", monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Doctor Appointment Booking</h1>
+    <form>
+
+            <div class="form">
+                <p class="title">Book Your Appointment</p>
+                <div class="wave-group">
+                    <input id="email" class="input" type="email" placeholder="" required="" autocomplete="off">
+                    <span id="bar" class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">P</span>
+                        <span class="label-char" style="--index: 1">a</span>
+                        <span class="label-char" style="--index: 2">t</span>
+                        <span class="label-char" style="--index: 3">i</span>
+                        <span class="label-char" style="--index: 4">e</span>
+                        <span class="label-char" style="--index: 5">n</span>
+                        <span class="label-char" style="--index: 6">t</span>
+                        <span class="label-char" style="--index: 7">-</span>
+                        <span class="label-char" style="--index: 8">N</span>
+                        <span class="label-char" style="--index: 9">a</span>
+                        <span class="label-char" style="--index: 10">m</span>
+                        <span class="label-char" style="--index: 11">e</span>
+                    </label>
+                </div>
+
+                <div style="padding-bottom: 35px;" class="wave-group">
+                    <select id="doctor" class="input" placeholder="" required="" autocomplete="off">
+                        <option  value="" selected disabled hidden></option>
+                        <option class="mind" id="Smith" value="Smith">Dr. Smith</option>
+                        <option class="mind" id="Williams" value="Williams">Dr. Williams</option>
+                        <option class="mind" id="Jhonson" value="Jhonson">Dr. Jhonson</option>
+                      </select>
+                    <span id="bar" class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">D</span>
+                        <span class="label-char" style="--index: 1">o</span>
+                        <span class="label-char" style="--index: 2">c</span>
+                        <span class="label-char" style="--index: 3">t</span>
+                        <span class="label-char" style="--index: 4">e</span>
+                        <span class="label-char" style="--index: 5">r</span>
+                        <span class="label-char" style="--index: 6">-</span>
+                        <span class="label-char" style="--index: 7">N</span>
+                        <span class="label-char" style="--index: 8">a</span>
+                        <span class="label-char" style="--index: 9">m</span>
+                        <span class="label-char" style="--index: 10">e</span>
+                    </label>
+                </div>
+
+                <div class="wave-group">
+                    <input id="date" class="inp" type="date" placeholder="" required="" autocomplete="off">
+                    <span id="bar" class="bar"></span>
+                    <label class="label" style="transform: translateY(-18px);">
+                        <span class="label-char" style="--index: 0">D</span>
+                        <span class="label-char" style="--index: 1">a</span>
+                        <span class="label-char" style="--index: 2">t</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                    </label>
+                </div>
+                
+                <div id="time-smith" style="padding-bottom: 35px;" class="wave-group ">
+                    <select class="input" placeholder="" required="" autocomplete="off">
+                        <option selected disabled hidden></option>
+                        <option class="mind" value="9:00 AM">9:00 AM</option>
+                        <option class="mind" value="9:15 AM">9:15 AM</option>
+                        <option class="mind" value="9:30 AM">9:30 AM</option>
+                        <option class="mind" value="9:45 AM">9:45 AM</option>
+                        <option class="mind" value="10:00 AM">10:00 AM</option>
+                        <option class="mind" value="11:00 AM">11:00 AM</option>
+                        <option class="mind" value="11:15 AM">11:15 AM</option>
+                        <option class="mind" value="11:30 AM">11:30 AM</option>
+                        <option class="mind" value="11:45 AM">11:45 AM</option>
+                        <option class="mind" value="12:00 PM">12:00 PM</option>
+                    </select>
+                    <span id="bar" class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">T</span>
+                        <span class="label-char" style="--index: 1">i</span>
+                        <span class="label-char" style="--index: 2">m</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                    </label>
+                </div>
+
+                <div id="time-williams" style="padding-bottom: 35px;" class="wave-group ">
+                    <select class="input" placeholder="" required="" autocomplete="off">
+                        <option selected disabled hidden></option>
+                        <option class="mind" value="9:00 AM">3:30 PM</option>
+                        <option class="mind" value="9:15 AM">3:45 PM</option>
+                        <option class="mind" value="9:30 AM">4:00 PM</option>
+                        <option class="mind" value="9:45 AM">5:00 PM</option>
+                        <option class="mind" value="10:00 AM">5:15 PM</option>
+                        <option class="mind" value="11:00 AM">5:30 PM</option>
+                        <option class="mind" value="11:15 AM">5:45 PM</option>
+                        <option class="mind" value="11:30 AM">6:00 PM</option>
+                        <option class="mind" value="11:45 AM">6:15 PM</option>
+                        <option class="mind" value="12:00 PM">6:30 PM</option>
+                    </select>
+                    <span id="bar" class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">T</span>
+                        <span class="label-char" style="--index: 1">i</span>
+                        <span class="label-char" style="--index: 2">m</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                    </label>
+                </div>
+
+                <div id="time-jhonson" style="padding-bottom: 35px;" class="wave-group ">
+                    <select class="input" placeholder="" required="" autocomplete="off">
+                        <option selected disabled hidden></option>
+                        <option class="mind" value="9:00 AM">7:30 PM</option>
+                        <option class="mind" value="9:15 AM">7:45 PM</option>
+                        <option class="mind" value="9:30 AM">8:00 PM</option>
+                        <option class="mind" value="9:45 AM">8:00 PM</option>
+                        <option class="mind" value="10:00 AM">8:15 PM</option>
+                        <option class="mind" value="11:00 AM">8:30 PM</option>
+                        <option class="mind" value="11:15 AM">9:45 PM</option>
+                        <option class="mind" value="11:30 AM">9:00 PM</option>
+                        <option class="mind" value="11:45 AM">9:15 PM</option>
+                        <option class="mind" value="12:00 PM">9:30 PM</option>
+                    </select>
+                    <span id="bar" class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">T</span>
+                        <span class="label-char" style="--index: 1">i</span>
+                        <span class="label-char" style="--index: 2">m</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                    </label>
+                </div>
+                <span id="booked" class="booked"></span>
+                
+                <button id="submit" class="submit">Book Appointment</button>
+            </div> 
+        
+    </form>
+
+    <form>
+        <div style="width: 105% !important;" class="form">
+            <p class="title">View Your Appointment</p>
+            <div class="wave-group">
+                <input id="app-id" class="input" type="text" placeholder="" required="">
+                <span class="bar"></span>
+                <label class="label">
+                  <span class="label-char" style="--index: 0">E</span>
+                  <span class="label-char" style="--index: 1">n</span>
+                  <span class="label-char" style="--index: 2">t</span>
+                  <span class="label-char" style="--index: 3">e</span>
+                  <span class="label-char" style="--index: 4">r</span>
+                  <span class="label-char" style="--index: 5">-</span>
+                  <span class="label-char" style="--index: 6">A</span>
+                  <span class="label-char" style="--index: 7">p</span>
+                  <span class="label-char" style="--index: 8">p</span>
+                  <span class="label-char" style="--index: 9">o</span>
+                  <span class="label-char" style="--index: 10">i</span>
+                  <span class="label-char" style="--index: 11">n</span>
+                  <span class="label-char" style="--index: 12">t</span>
+                  <span class="label-char" style="--index: 13">m</span>
+                  <span class="label-char" style="--index: 14">e</span>
+                  <span class="label-char" style="--index: 15">n</span>
+                  <span class="label-char" style="--index: 16">t</span>
+                  <span class="label-char" style="--index: 17">-</span>
+                  <span class="label-char" style="--index: 18">I</span>
+                  <span class="label-char" style="--index: 19">D</span>
+                 </label>
+              </div>
+
+              <span style="transform: translateY(-6px) translateX(-10.5px);" id="password-error"></span>
+
+             <div id="details">
+                
+             </div>
+
+            <button id="view-appointment-form" class="submit">View Appointment</button>
+        </div>
+    </form>
+
+    <form>
+        <div style="width: 105% !important;" class="form">
+            <p class="title">Cancel Your Appointment</p>
+            <div class="wave-group">
+                <input id="app-id" class="input" type="text" placeholder="" required="">
+                <span class="bar"></span>
+                <label class="label">
+                  <span class="label-char" style="--index: 0">E</span>
+                  <span class="label-char" style="--index: 1">n</span>
+                  <span class="label-char" style="--index: 2">t</span>
+                  <span class="label-char" style="--index: 3">e</span>
+                  <span class="label-char" style="--index: 4">r</span>
+                  <span class="label-char" style="--index: 5">-</span>
+                  <span class="label-char" style="--index: 6">A</span>
+                  <span class="label-char" style="--index: 7">p</span>
+                  <span class="label-char" style="--index: 8">p</span>
+                  <span class="label-char" style="--index: 9">o</span>
+                  <span class="label-char" style="--index: 10">i</span>
+                  <span class="label-char" style="--index: 11">n</span>
+                  <span class="label-char" style="--index: 12">t</span>
+                  <span class="label-char" style="--index: 13">m</span>
+                  <span class="label-char" style="--index: 14">e</span>
+                  <span class="label-char" style="--index: 15">n</span>
+                  <span class="label-char" style="--index: 16">t</span>
+                  <span class="label-char" style="--index: 17">-</span>
+                  <span class="label-char" style="--index: 18">I</span>
+                  <span class="label-char" style="--index: 19">D</span>
+                 </label>
+              </div>
+
+              <span style="transform: translateY(-6px) translateX(5.5px);" id="cancel"></span>
+
+            <button id="cancel-appointment-form" class="submit">Cancel Appointment</button>
+        </div>
+    </form>
+     
+
+    <div style="display: flex;justify-content: center;align-items: center; margin-top: 30px;">
+        <button id="page-2" class="submit">Back</button>
+    </div>
+    
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
