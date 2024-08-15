@@ -1,0 +1,280 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Item List</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background: #6c7ae0;
+
+            font-weight: normal;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        th:last-child {
+            border: 0;
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #808080;
+
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f6ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Food Items</h1>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Food Group</th>
+                                <th>Description</th>
+                                <th>Nutritional Information</th>
+                                <th>Serving Size</th>
+                                <th>Allergens</th>
+                                <th>Ingredients</th>
+                                <th>Preparation Methods</th>
+                                <th>Health Benefits</th>
+                                <th>Best Practices</th>
+                                <th>CRUD</th>
+                            </tr>
+                        </thead>
+                        <tbody id="main">
+                            <tr>
+                                <td>Apple</td>
+                                <td>Fruits</td>
+                                <td>A sweet and crunchy fruit with various varieties.</td>
+                                <td>Rich in fiber, vitamins, and antioxidants.</td>
+                                <td>One medium-sized apple.</td>
+                                <td>None</td>
+                                <td>Apple</td>
+                                <td>Raw, Baked, In desserts</td>
+                                <td>Supports heart health and digestion.</td>
+                                <td>Choose organic apples for fewer pesticides.</td>
+                                <td> <button class="desactivate" id="update" type="button"
+                                        onclick="updateInfo()">Update</button> <button class="desactivate" id="delete"
+                                        type="button" onclick="deleteInfo()">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <button class="add" type="button" onclick="addFood()">Add Food</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', getItems);
+
+        function generateUniqueId() {
+            return Math.random().toString(36).substr(2, 9);
+        }
+
+        function addFood() {
+
+            const noData = document.getElementById('noData')
+            noData.classList.add('hide')
+            
+            const itemId = generateUniqueId(); // Generate a unique ID using a library like uuid
+            tr.dataset.id = itemId;
+            tr.innerHTML = `
+                    <td> <textarea id="itemName" class="itemName" placeholder="Name"></textarea> </td>
+                    <td> <textarea id="foodGroup" class="foodGroup" placeholder="Food Group"></textarea> </td>
+                    <td> <textarea id="description" class="description" placeholder="Description"></textarea> </td>
+                    <td> <textarea id="nutritionalInformation" class="nutritionalInformation" placeholder="Nutritional Information"></textarea> </td>
+                    <td> <textarea id="servingSize" class="servingSize" placeholder="Serving Size"></textarea> </td>
+                    <td> <textarea id="allergens" class="allergens" placeholder="Allergens"></textarea> </td>
+                    <td> <textarea id="ingredients" class="ingredients" placeholder="Ingredients"></textarea> </td>
+                    <td> <textarea id="preparationMethods" class="preparationMethods" placeholder="Preparation Methods"></textarea> </td>
+                    <td> <textarea id="healthBenefits" class="healthBenefits" placeholder="Health Benefits"></textarea> </td>
+                    <td> <textarea id="bestPractices" class="bestPractices" placeholder="Best Practices"></textarea> </td>
+                    <td>
+                        <button class="desactivate" id="update" type="button" onclick="updateInfo(this.parentNode.parentNode)">Update</button>
+                        <button class="desactivate" id="delete" type="button" onclick="deleteInfo(this.parentNode.parentNode)">Delete</button>
+                    </td>
+                `;
+            main.appendChild(tr);
+
+
+
+
+            const itemName = tr.cells[0].children[0].value;
+            const foodGroup = tr.cells[1].children[0].value;
+            const description = tr.cells[2].children[0].value;
+            const nutritionalInformation = tr.cells[3].children[0].value;
+            const servingSize = tr.cells[4].children[0].value;
+            const allergens = tr.cells[5].children[0].value;
+            const ingredients = tr.cells[6].children[0].value;
+            const preparationMethods = tr.cells[7].children[0].value;
+            const healthBenefits = tr.cells[8].children[0].value;
+            const bestPractices = tr.cells[9].children[0].value;
+
+
+        }
+
+
+        function getItems() {
+
+            try {
+                fetch('http://localhost:3000/data')
+                    .then(res => res.json())
+                    .then(data => {
+                        const main = document.getElementById('main');
+                        if (data.length === 0) {
+                            setInterval(() => {
+                                main.innerHTML = '<p id="noData">No data found.</p>';
+                            }, 200);
+                            clearInterval
+                            
+                        } else {
+                            data.forEach(item => {
+                                const tr = document.createElement('tr');
+                                tr.dataset.id = item._id;
+                                tr.innerHTML = `
+                                <td><textarea id="itemName" class="itemName">${item.name}</textarea></td>
+                                <td><textarea id="foodGroup" class="foodGroup">${item.foodGroup}</textarea></td>
+                                <td><textarea id="description" class="description" rows="4" cols="30">${item.description}</textarea></td>
+                                <td><textarea id="nutritionalInformation" class="nutritionalInformation" rows="4" cols="30">${item.nutritionalInformation}</textarea></td>
+                                <td><textarea id="servingSize" class="servingSize">${item.servingSize}</textarea></td>
+                                <td><textarea id="allergens" class="allergens">${item.allergens}</textarea></td>
+                                <td><textarea id="ingredients" class="ingredients">${item.ingredients}</textarea></td>
+                                <td><textarea id="preparationMethods" class="preparationMethods">${item.preparationMethods}</textarea></td>
+                                <td><textarea id="healthBenefits" class="healthBenefits">${item.healthBenefits}</textarea></td>
+                                <td><textarea id="bestPractices" class="bestPractices" rows="4" cols="30">${item.bestPractices}</textarea></td>
+                                <td>
+                                    <button class="desactivate" id="update" type="button" onclick="updateInfo(this.parentNode.parentNode.dataset.id)">Update</button>
+                                    <button class="desactivate" id="delete" type="button" onclick="deleteInfo(this.parentNode.parentNode.dataset.id)">Delete</button>
+                                </td>
+                                `;
+                                main.appendChild(tr);
+                                console.log('item loaded sucessfully');
+                            });
+                        }
+
+                    })
+                    .catch(error => console.log("no data found"));
+
+
+            } catch (error) {
+                console.log("no data found");
+            }
+        }
+
+        async function deleteInfo(tr) {
+            console.log('delete button is clicked');
+
+            const itemId = tr.dataset.id;
+            fetch(`http://localhost:3000/data/${itemId}`, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(() => {
+                    // Remove the table row from the DOM
+                    const ttt = document.querySelector(`tr[data-id="${itemId}"]`);
+                    ttt.remove();
+                    console.log('item deleted sucessfully');
+                })
+                .catch(error => console.error('Error deleting item:', error));
+        }
+
+
+        function updateInfo(tr) {
+
+            console.log('update button is clicked');
+
+            const itemId = tr.dataset.id;
+            const itemName = tr.cells[0].children[0].value;
+            const foodGroup = tr.cells[1].children[0].value;
+            const description = tr.cells[2].children[0].value;
+            const nutritionalInformation = tr.cells[3].children[0].value;
+            const servingSize = tr.cells[4].children[0].value;
+            const allergens = tr.cells[5].children[0].value;
+            const ingredients = tr.cells[6].children[0].value;
+            const preparationMethods = tr.cells[7].children[0].value;
+            const healthBenefits = tr.cells[8].children[0].value;
+            const bestPractices = tr.cells[9].children[0].value;
+
+            const data = {
+                name: itemName,
+                foodGroup: foodGroup,
+                description: description,
+                nutritionalInformation: nutritionalInformation,
+                servingSize: servingSize,
+                allergens: allergens,
+                ingredients: ingredients,
+                preparationMethods: preparationMethods,
+                healthBenefits: healthBenefits,
+                bestPractices: bestPractices
+            };
+
+            fetch(`http://localhost:3000/data/${itemId}`)
+                .then(res => res.json())
+                .then(item => {
+                    if (item) {
+                        // Item exists, update it
+                        fetch(`http://localhost:3000/data/${itemId}`, {
+                            method: 'PATCH',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data),
+                        })
+                            .then(res => res.json())
+                            .then(() => {
+                                console.log('item updated successfully');
+                            })
+                            .catch(error => console.error('Error updating item:', error));
+                    } else {
+                        // Item doesn't exist, add it as a new item
+                        fetch('http://localhost:3000/data', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data),
+                        })
+                            .then(res => res.json())
+                            .then(() => {
+                                console.log('item added successfully');
+                            })
+                            .catch(error => console.error('Error adding item:', error));
+                    }
+                })
+                .catch(error => console.error('Error checking item existence:', error));
+        }
+    </script>
+
+</body>
+
+</html>
