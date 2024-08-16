@@ -123,4 +123,13 @@
     display: none;
   }
 
+  #noData{
+    position: relative;
+    left: 455%;
+    text-wrap: nowrap;
+    font-size: 120%;
+    width: 100%;
+    
+  }
+
   
