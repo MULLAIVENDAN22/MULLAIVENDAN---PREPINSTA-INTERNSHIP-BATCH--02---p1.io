@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Task Manager</h1>
+    <form id="task-form">
+        <label for="courseId">Course ID:</label>
+        <input type="text" id="courseId" name="courseId" required>
+
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName" required>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" required>
+
+        <label for="details">Additional Details:</label>
+        <textarea id="details" name="details"></textarea>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="tasks">
+        <!-- Task list will be rendered here -->
+    </div>
+
+    <script>
+        document.getElementById('task-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const courseId = document.getElementById('courseId').value;
+    const taskName = document.getElementById('taskName').value;
+    const dueDate = document.getElementById('dueDate').value;
+    const details = document.getElementById('details').value;
+
+    try {
+      const response = await fetch('http://localhost:4000/tasks', { // Update port number to 4000
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ courseId, taskName, dueDate, details }),
+      });
+
+      if (response.ok) {
+        alert('Task added successfully');
+        // Optionally, fetch and display the tasks again
+      } else {
+        alert('Failed to add task');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Error adding task');
+    }
+  });
+    </script>
+</body>
+
+</html>
